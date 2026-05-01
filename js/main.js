@@ -72,9 +72,7 @@ function setupLogout() {
   });
 }
 
-/**
- * Global UI Helpers
- */
+
 
 export function showToast(message, type = 'success') {
   const container = document.getElementById('toast-container') || createToastContainer();

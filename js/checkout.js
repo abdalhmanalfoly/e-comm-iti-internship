@@ -5,7 +5,7 @@ import { getCurrentUser } from './auth.js';
 
 export function placeOrder(shippingInfo) {
 
-  const user = getCurrentUser(); // ✔️ الأول
+  const user = getCurrentUser(); 
 
   if (!user) {
     window.location.href = "login.html";
@@ -20,7 +20,7 @@ export function placeOrder(shippingInfo) {
 
   const subtotal = getCartSubtotal();
   const tax = subtotal * 0.1;
-  const shipping = 5.00;
+  const shipping = subtotal * 0.01;
   const total = subtotal + tax + shipping;
 
   const orders = getData("orders") || []; // ✔️ مهم جدًا
