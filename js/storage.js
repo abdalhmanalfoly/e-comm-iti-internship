@@ -19,7 +19,9 @@ export function setData(key, data) {
 export function getSingleData(key) {
   try {
     const data = localStorage.getItem(key);
+    console.log(`Retrieved single data for key "${key}":`, data);
     return data ? JSON.parse(data) : null;
+
   } catch (error) {
     console.error(`Error getting single data for key "${key}":`, error);
     return null;
